@@ -1,0 +1,136 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 450px;
+    height: 350px;
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    border-radius: 20px;
+}
+
+.card h3{
+    font-size: 20px;
+    padding: 20px 0;
+    color: #444;
+}
+
+.card p{
+    font-size: 15px;
+    color: #777;
+}
+
+.card button{
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.card button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.card::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card::after{
+    width: 100%;
+    height: 100%;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    content: '';
+    top: 0;
+    right: 0;
+    position:absolute;
+    z-index: -2;
+    clip-path: circle(20% at 100% 10%);
+    transition: .2s;
+}
+
+.card:nth-child(odd)::after{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80d0c7 100%);
+}
+
+.card:nth-child(even)::after{
+    background-color: #08aeea;
+    background-image: linear-gradient(160deg, #08aeea 0%, #2af598 100%);
+}
+
+.card:hover::after{
+    clip-path: circle(100%);
+}
+
+.handel{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.handel_inside{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.handel_card{
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.handel_opactiy{
+    opacity: .2;
+}
+
+.details{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+}
